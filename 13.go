@@ -2,9 +2,8 @@ package main
 
 import (
 	"bufio"
-	"os"
 	"fmt"
-	// "math"
+	"os" // "math"
 	"strconv"
 )
 
@@ -14,7 +13,7 @@ func Ints(n int) []int {
 	var d, m int
 	d = n
 
-	if (d == 0) {
+	if d == 0 {
 		return []int{0}
 	}
 
@@ -32,7 +31,7 @@ func Sum(array []int) []int {
 		v := array[i] + l
 		array[i] = v % 10
 		l = v / 10
-	} 
+	}
 	// fmt.Println(Ints(l))
 	// fmt.Println(array)
 	result := append(Ints(l), array...)
@@ -52,7 +51,7 @@ func main() {
 	var n int64
 	for scanner.Scan() {
 		s := scanner.Text()
-		if (s == "\n") {
+		if s == "\n" {
 			a = append(a, row)
 			r++
 			row = []int{}
@@ -68,7 +67,7 @@ func main() {
 	var sum int = 0
 
 	// iterate over columns in backward order
-	for i := cn-1; i >= 0; i-- {
+	for i := cn - 1; i >= 0; i-- {
 		// sum of current position
 		sum = 0
 		for j := 0; j < rn; j++ {
@@ -90,7 +89,7 @@ func main() {
 	fmt.Println(ss)
 	fmt.Println()
 	fmt.Println(ss[:10])
-	for i:=0; i<10; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Printf("%v", ss[i])
 	}
 
